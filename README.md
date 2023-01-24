@@ -1,29 +1,35 @@
-# Next.js + Jest
+# Front End challenge da empresa Mks Desenvolvimento De Sistemas
 
-This example shows how to configure Jest to work with Next.js.
+Diretrizes do desafio
+===========================
 
-This includes Next.js' built-in support for Global CSS, CSS Modules and TypeScript.
+O objetivo principal desse teste é avaliar sua capacidade de escrever código limpo, bem testado e reutilizável.
 
-## How to Use
+Tarefa (funcional)
+---------------
 
-Quickly get started using [Create Next App](https://github.com/vercel/next.js/tree/canary/packages/create-next-app#readme)!
+Para esse desafio, você deve consumir nossa [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
 
-In your terminal, run the following command:
+A aplicação deve conter apenas uma página/rota e um carrinho.
 
-```bash
-npx create-next-app --example with-jest with-jest-app
-```
+- <b>Loja</b>: A lista de produtos deve ser buscada de nossa API, use um shimmer/skeleton enquanto estiver em loading.
+ 
+- <b>Carrinho</b>: O carrinho deve conter todos os produtos selecionados, juntamente com a opção de aumentar a quantidade de cada produto selecionado.
 
-```bash
-yarn create next-app --example with-jest with-jest-app
-```
+Use do Jest e a testing-library para realizar os testes unitários.
 
-```bash
-pnpm create next-app --example with-jest with-jest-app
-```
+Recursos
+---------------
 
-## Run Jest Tests
+UI/UX: [Figma loja](https://www.figma.com/file/Z4z8osDbK1ET7cjNzFRMrK/MKS-Front-end-challenge?node-id=0%3A1) PS: O design system está incluso, incluindo a fonte.
 
-```bash
-npm test
-```
+API: [API REST de produtos](https://mks-challenge-api-frontend.herokuapp.com/api-docs/) para exibir a lista de produtos da loja.
+
+Ferramentas requeridas
+---------------
+
+1. TypeScript
+2. React ou Next.js (Preferimos Next.js)
+3. Redux toolkit
+4. Styled-components
+5. Jest
