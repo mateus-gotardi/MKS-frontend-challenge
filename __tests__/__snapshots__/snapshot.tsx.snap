@@ -1,9 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders homepage unchanged 1`] = `
+.c0 {
+  width: 100%;
+  background-color: #0F52BA;
+  height: 3rem;
+}
+
 <div>
-  <h1>
-    hello world
-  </h1>
+  <header
+    class="c0"
+  >
+    <h1>
+      Header
+    </h1>
+  </header>
 </div>
 `;

@@ -1,9 +1,10 @@
 import { render, screen } from '@testing-library/react'
-import Home from '@/pages/index'
+import { Header } from '../components'
 
-describe('Home', () => {
-  it('renders a heading', () => {
-    render(<Home />)
-    expect(screen.getByRole('heading')).toHaveTextContent('hello world')
+describe('Check the Homepage', () => {
+  it('render the header', () => {
+    const {container} = render(<Header />)
+    expect(container.firstChild).toHaveStyleRule('height', '3rem' )
+    expect(container.firstChild).toHaveStyleRule('background-color', '#0F52BA' )
   })
 })
