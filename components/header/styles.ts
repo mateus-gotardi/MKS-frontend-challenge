@@ -4,5 +4,5 @@ import { ComponentProps } from "../../interfaces";
 export const HeaderContainer = styled.header<ComponentProps>`
 width: 100%;
 background-color: ${(props) => props.colors.primary};
-height: 3rem;
+height: 6.31rem;
 `

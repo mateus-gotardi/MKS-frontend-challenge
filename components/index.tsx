@@ -1,4 +1,6 @@
 import Header from "./header";
+import ProductsDisplay from "./productsDisplay"
+
 
 const colors = {
     background: '#F9F9F9',
@@ -9,5 +11,5 @@ const colors = {
     darkGrey: '#2C2C2C',
 }
 
-export { colors, Header };
+export { colors, Header, ProductsDisplay };
 
