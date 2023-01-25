@@ -20,3 +20,13 @@ export interface AllProducts {
 export interface ApiResponse {
     data: AllProducts
 }
+export interface ComponentProps {
+    colors: {
+        background:string,
+        white:string,
+        primary:string,
+        black:string,
+        grey:string,
+        darkGrey:string,
+    };
+}

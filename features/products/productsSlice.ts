@@ -9,7 +9,7 @@ const initialState: AllProducts = {
     count: 0
 }
 
-export const counterSlice = createSlice({
+export const productsSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
@@ -17,11 +17,14 @@ export const counterSlice = createSlice({
             state.products = action.payload.products
             state.count = action.payload.count
         },
+        getProducts: (state) => {
+            return state
+        }
     },
 })
 
-export const { updateProducts } = counterSlice.actions
+export const { updateProducts, getProducts } = productsSlice.actions
 
 export const selectProducts = (state: RootState) => state.products
 
-export default counterSlice.reducer
+export default productsSlice.reducer

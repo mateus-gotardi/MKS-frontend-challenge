@@ -12,17 +12,29 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addProduct: (state, action: PayloadAction<Product>) => {
-            let index = state.cartProducts.findIndex((product) => product.id === action.payload.id)
-            if (index !== -1) {
-                console.log('produto no carrinho')
+            const product = state.cartProducts.find((product) => product.id === action.payload.id)
+            if (product) {
+                product.quantity = product.quantity ? product.quantity + 1 : 1
             }
             else {
-                state.cartProducts.push(action.payload)
+                let productToAdd = action.payload
+                productToAdd.quantity = 1
+                state.cartProducts.push(productToAdd)
             }
-
         },
         removeProduct: (state, action: PayloadAction<Product>) => {
-            state.cartProducts = state.cartProducts.filter((product) => product.id !== action.payload.id)
+            let product = state.cartProducts.find((product) => product.id === action.payload.id)
+            if (product) {
+                if (product.quantity && product.quantity > 1) {
+                    product.quantity = product.quantity - 1
+                }
+                else {
+                    state.cartProducts = state.cartProducts.filter((product) => product.id !== action.payload.id)
+                }
+            }
+        },
+        getCart: (state) => {
+            return state
         }
     },
 })

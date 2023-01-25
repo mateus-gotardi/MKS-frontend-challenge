@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ComponentProps } from "..";
+import { ComponentProps } from "../../interfaces";
 
 export const HeaderContainer = styled.header<ComponentProps>`
 width: 100%;

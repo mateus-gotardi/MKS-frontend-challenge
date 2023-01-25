@@ -8,17 +8,6 @@ const colors = {
     grey: '#373737',
     darkGrey: '#2C2C2C',
 }
-interface ComponentProps {
-    colors: {
-        background:string,
-        white:string,
-        primary:string,
-        black:string,
-        grey:string,
-        darkGrey:string,
-    };
-}
 
 export { colors, Header };
-export type { ComponentProps };
 
