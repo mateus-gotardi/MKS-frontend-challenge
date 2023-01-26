@@ -10,11 +10,11 @@ const ProductsDisplay = () => {
 
     return (
         <ProductsDisplayContainer colors={colors}>
-            <div className='products'>
-                {allProducts.products.map((product) => {
-                    return <ProductCard product={product} />
+            <section className='products'>
+                {allProducts.products.map((product, key) => {
+                    return <ProductCard product={product} key={key}/>
                 })}
-            </div>
+            </section>
 
         </ProductsDisplayContainer>
     )

@@ -22,11 +22,12 @@ export interface ApiResponse {
 }
 export interface ComponentProps {
     colors: {
-        background:string,
-        white:string,
-        primary:string,
-        black:string,
-        grey:string,
-        darkGrey:string,
+        background: string,
+        white: string,
+        primary: string,
+        black: string,
+        grey: string,
+        darkGrey: string,
+        lightGrey: string,
     };
 }

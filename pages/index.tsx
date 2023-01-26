@@ -1,4 +1,4 @@
-import { Header, ProductsDisplay } from "../components"
+import { Header, ProductsDisplay, Footer } from "../components"
 import { useSelector, useDispatch } from 'react-redux'
 import { addProduct, removeProduct, selectCart } from "features/cart/cartSlice"
 import { mksAPI } from 'apiConfig'
@@ -12,6 +12,7 @@ export default function Home(props:any) {
     <>
       <Header />
       <ProductsDisplay/>
+      <Footer />
     </>
   )
 }

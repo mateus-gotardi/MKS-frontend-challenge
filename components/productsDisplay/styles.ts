@@ -11,6 +11,21 @@ export const CardContainer = styled.div<ComponentProps>`
     background-color: ${(props) => props.colors.white};
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.135216);
     border-radius: 8px;
+    transition: 10s ease-in-out;
+    &:hover{
+        .infos{
+            .description{
+                height:100%;
+            }
+            overflow: visible;
+        }
+        .buy-button{
+            position: relative;
+            top: 1rem;
+        }
+        position: relative;
+        top: -1rem;
+    }
     .infos{
         color: ${(props) => props.colors.darkGrey};
         height: 6.01rem;
@@ -62,6 +77,7 @@ export const CardContainer = styled.div<ComponentProps>`
             border: none;
             height: 1.99rem;
             gap: .875rem;
+            min-height: 1.99rem;
     }
     img{
         padding: .4rem;
@@ -70,19 +86,23 @@ export const CardContainer = styled.div<ComponentProps>`
     }
 
 `
-export const ProductsDisplayContainer = styled.section<ComponentProps>`
+export const ProductsDisplayContainer = styled.div<ComponentProps>`
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
-    width:100vw;
-    height: calc(100vh - 6.31rem);
+    width:100%;
+    margin-top: 6.3rem;
+    padding-top: 5%;
+    padding-bottom: 7%;
+    overflow-x: hidden;
     .products{
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(4, 13.625rem);
         justify-content: center;
         align-items: center;
         width: 80%;
         height: 80%;
-        gap: 1rem;
+        row-gap: 1.9375rem;
+        column-gap: 1.375rem;
     }
 `
