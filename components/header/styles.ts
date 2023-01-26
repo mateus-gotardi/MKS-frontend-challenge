@@ -36,6 +36,18 @@ h1{
     }
 }
 z-index:999;
+@media (max-width: 475px){
+    height: 3rem;
+    h1{
+        margin-left: 1.25rem;
+        .mks{
+            font-size: 2rem;
+        }
+        .sistemas{
+            font-size: 1rem;
+        }
+    }
+}
 `
 
 export const CartButton = styled.button<ComponentProps>`
@@ -50,8 +62,28 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 1rem;
+.shopping-cart{
+    width: 1.25rem;
+    height: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 span{
     font-size: 1.125rem;
     font-weight: 700;
+}
+@media (max-width: 475px){
+    margin-right: 1.25rem;
+    height: 1.625rem;
+    width: 3.25rem;
+    gap: .64rem;
+    span{
+        font-size: .75rem;
+    }
+    .shopping-cart{
+        width: .7rem;
+        height: .65rem;
+    }
 }
 `

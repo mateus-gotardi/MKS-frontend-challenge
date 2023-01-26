@@ -105,4 +105,19 @@ export const ProductsDisplayContainer = styled.div<ComponentProps>`
         row-gap: 1.9375rem;
         column-gap: 1.375rem;
     }
+    @media (max-width: 590px) {
+        .products{
+            grid-template-columns: repeat(1, 13.625rem);
+        }
+    }
+    @media (min-width: 591px) and (max-width: 900px) {
+        .products{
+            grid-template-columns: repeat(2, 13.625rem);
+        }
+    }
+    @media (min-width: 901px) and (max-width: 1024px) {
+        .products{
+            grid-template-columns: repeat(3, 13.625rem);
+        }
+    }
 `
