@@ -33,3 +33,23 @@ Ferramentas requeridas
 3. Redux toolkit
 4. Styled-components
 5. Jest
+
+# Execução
+
+## estrutura
+
+    -Os componentes estão na pasta components, em subpastas juntamente com os respectivos sub-componentes e estilos, eles são importados para o arquivo index da pasta components e exportados a partir de lá a fim de diminuir a multiplicidade de imports
+
+    - Os reducers estão setados na pasta features, cada qual com seu proprio selector configurado
+
+    - Os tipos estão concentrados na pasta interface, no arquivo index
+
+    - Os SVGs estão componentizados na pasta SVG para facilitar o uso
+
+    - Para as chamadas de API foi utilizado axios, a baseURL está configurada no arquivo API config
+
+    - As requisições são feitas em SSR utilizando getInitialProps no componente Home
+
+    - Os testes estão no diretório __tests__ o teste de api foi desabilitado para evitar sobrecarga de requisições
+
+    - As funções para formatação de nomes e preço dos produtos está em utils/functions
