@@ -41,4 +41,11 @@ describe('test redux cart state', () => {
         cartState = cartSlice.reducer(cartState, cartSlice.actions.removeProduct({ id: 1, name: 'test', brand: 'test', description: 'test', price: 1, photo: 'test' }))
         expect(cartState).toEqual({ cartProducts: [{ id: 1, name: 'test', brand: 'test', description: 'test', price: 1, photo: 'test', quantity: 1 }] })
     })
+    it ('should remove all of one product', ()=>{
+        let cartState = cartSlice.reducer(undefined, cartSlice.actions.getCart())
+        cartState = cartSlice.reducer(cartState, cartSlice.actions.addProduct({ id: 1, name: 'test', brand: 'test', description: 'test', price: 1, photo: 'test' }))
+        cartState = cartSlice.reducer(cartState, cartSlice.actions.addProduct({ id: 1, name: 'test', brand: 'test', description: 'test', price: 1, photo: 'test' }))
+        cartState = cartSlice.reducer(cartState, cartSlice.actions.removeAll({ id: 1, name: 'test', brand: 'test', description: 'test', price: 1, photo: 'test' }))
+        expect(cartState).toEqual({ cartProducts: [] })
+    })
 })

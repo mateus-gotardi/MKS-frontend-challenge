@@ -28,7 +28,7 @@ export const CardContainer = styled.div<ComponentProps>`
     }
     .infos{
         color: ${(props) => props.colors.darkGrey};
-        height: 6.01rem;
+        height: 6.9rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between; 
@@ -41,19 +41,6 @@ export const CardContainer = styled.div<ComponentProps>`
             .name{
                 font-size: 1rem;
                 font-weight: 400;
-            }
-            .price-tag{
-                font-weight: 700;
-                font-size: 15px;
-                line-height: 15px;
-                height: 1.625rem;
-                padding: .25rem .41rem;
-                background-color: ${(props) => props.colors.grey};
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: ${(props) => props.colors.white};
-                border-radius: 5px;
             }
         }
         .description{
@@ -79,10 +66,10 @@ export const CardContainer = styled.div<ComponentProps>`
             gap: .875rem;
             min-height: 1.99rem;
     }
-    img{
+    .product-image{
         padding: .4rem;
         width: fit-content;
-        max-height: 55%;
+        max-height: 8.9rem;
     }
 
 `
@@ -119,5 +106,8 @@ export const ProductsDisplayContainer = styled.div<ComponentProps>`
         .products{
             grid-template-columns: repeat(3, 13.625rem);
         }
+    }
+    @media (max-width: 475px){
+        margin-top: 3rem;
     }
 `

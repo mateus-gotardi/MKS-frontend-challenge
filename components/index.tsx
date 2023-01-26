@@ -1,6 +1,8 @@
 import Header from "./header";
 import ProductsDisplay from "./productsDisplay"
 import Footer from "./footer";
+import Cart from "./cart";
+import PriceTag from "./priceTag";
 
 const colors = {
     background: '#F9F9F9',
@@ -10,7 +12,8 @@ const colors = {
     grey: '#373737',
     darkGrey: '#2C2C2C',
     lightGrey: '#EEEEEE',
+    lighterGrey: '#BFBFBF'
 }
 
-export { colors, Header, Footer, ProductsDisplay };
+export { colors, Header, Footer, ProductsDisplay, Cart, PriceTag };
 

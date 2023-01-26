@@ -10,7 +10,7 @@ top: 0;
 display: flex;
 align-items: center;
 justify-content: space-between;
-h1{
+.logo{
     color:${(props) => props.colors.white};
     height: 100%;
     display: flex;
@@ -38,7 +38,7 @@ h1{
 z-index:999;
 @media (max-width: 475px){
     height: 3rem;
-    h1{
+    .logo{
         margin-left: 1.25rem;
         .mks{
             font-size: 2rem;
@@ -62,6 +62,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 1rem;
+svg{ width: auto;
+    height: auto;
+}
 .shopping-cart{
     width: 1.25rem;
     height: 1.125rem;

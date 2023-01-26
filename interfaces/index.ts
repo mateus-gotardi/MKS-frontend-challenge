@@ -5,11 +5,20 @@ export interface Product {
     description: string;
     price: number;
     photo: string;
-    quantity?: number;
 }
 
-export interface CartProducts {
-    cartProducts: Product[];
+export interface CartProduct{
+    id: number;
+    name: string;
+    brand: string;
+    description: string;
+    price: number;
+    photo: string;
+    quantity: number;
+}
+
+export interface Cart {
+    cartProducts: CartProduct[];
 }
 
 export interface AllProducts {
@@ -29,5 +38,12 @@ export interface ComponentProps {
         grey: string,
         darkGrey: string,
         lightGrey: string,
+        lighterGrey: string,
     };
+    sizes?: {
+        width?: number,
+        height?: number,
+        font?: number,
+    }
+    isCart?: boolean;
 }

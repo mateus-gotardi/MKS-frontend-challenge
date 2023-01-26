@@ -1,12 +1,10 @@
 import { Header, ProductsDisplay, Footer } from "../components"
-import { useSelector, useDispatch } from 'react-redux'
-import { addProduct, removeProduct, selectCart } from "features/cart/cartSlice"
+import { useDispatch } from 'react-redux'
 import { mksAPI } from 'apiConfig'
 import { updateProducts } from '../features/products/productsSlice'
 export default function Home(props:any) {
   const dispatch = useDispatch()
   dispatch(updateProducts(props))
-  const cart = useSelector(selectCart)
 
   return (
     <>

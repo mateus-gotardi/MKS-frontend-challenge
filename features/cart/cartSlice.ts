@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from 'store';
-import { CartProducts, Product } from 'interfaces';
+import { Cart, Product } from 'interfaces';
 
-const initialState: CartProducts = {
+const initialState: Cart = {
     cartProducts: [],
 }
 
@@ -17,7 +17,7 @@ export const cartSlice = createSlice({
                 product.quantity = product.quantity ? product.quantity + 1 : 1
             }
             else {
-                let productToAdd = action.payload
+                let productToAdd = JSON.parse(JSON.stringify(action.payload))
                 productToAdd.quantity = 1
                 state.cartProducts.push(productToAdd)
             }
@@ -33,6 +33,9 @@ export const cartSlice = createSlice({
                 }
             }
         },
+        removeAll: (state, action: PayloadAction<Product>) => {
+            state.cartProducts = state.cartProducts.filter((product) => product.id !== action.payload.id)
+        },
         getCart: (state) => {
             return state
         }
@@ -40,7 +43,7 @@ export const cartSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addProduct, removeProduct } = cartSlice.actions
+export const { addProduct, removeProduct, removeAll, getCart } = cartSlice.actions
 
 export const selectCart = (state: RootState) => state.cart.cartProducts
 

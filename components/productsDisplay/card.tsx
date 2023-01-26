@@ -1,34 +1,30 @@
 import React from 'react';
-import { colors } from '..';
+import { colors, PriceTag } from '..';
 import { CardContainer } from './styles';
 import { Product } from '../../interfaces';
 import ShoppingBasket from '../../SVG/shoppingBasket';
+import { useDispatch } from 'react-redux'
+import { addProduct } from "../../features/cart/cartSlice"
+import { formatName, formatPrice } from '../../utils/functions';
 
 const ProductCard = (props: any) => {
-    const formatPrice = (price: number) => {
-        let formatter = new Intl.NumberFormat('pt-BR', {
-            style: 'currency',
-            currency: 'BRL',
-        });
-        let formattedPrice = formatter.format(price);
-        return formattedPrice.slice(0, -3);;
-    }
+
+    const dispatch = useDispatch()
+
     const product: Product = props.product;
     return (
         <CardContainer colors={colors}>
-            <img className='image' src={product.photo} alt={product.name} />
+            <img className='product-image' src={product.photo} alt={product.name} />
             <div className='infos'>
                 <div className='name-price'>
                     <span className='name'>
-                        {product.name}
+                        {formatName(product.name, product.brand)}
                     </span>
-                    <span className='price-tag'>
-                        {formatPrice(product.price)}
-                    </span>
+                    <PriceTag price={formatPrice(product.price)}/>
                 </div>
                 <p className='description'>{product.description}</p>
             </div>
-            <button className='buy-button'><>
+            <button className='buy-button' onClick={()=>{dispatch(addProduct(product))}}><>
                 <ShoppingBasket /> COMPRAR
             </>
             </button>
