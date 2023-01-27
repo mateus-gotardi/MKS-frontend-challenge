@@ -85,6 +85,18 @@ export const CartContainer = styled.div<ComponentProps>`
             }
         }
     }
+    @media (max-height: 500px) {
+        .cart-footer{
+            h1{
+                padding: .7rem 2.75rem!important;
+                font-size: 1.5rem !important;
+            }
+            button{
+                height: 4.3rem !important;
+                font-size: 1.5rem !important;
+            }
+        }
+    }
 `
 
 
@@ -117,8 +129,9 @@ export const ItemCart = styled.div<ComponentProps>`
             justify-content: center;
             width: 4rem;
             .cart-image{
-                width:fit-content;
                 height: 3.5625rem;
+                aspect-ratio: 1/1;
+                object-fit: contain;
             }
         }
        
