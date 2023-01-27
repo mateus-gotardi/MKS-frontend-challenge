@@ -62,8 +62,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 1rem;
-svg{ width: auto;
-    height: auto;
+svg{ 
+    width: 1.25rem;
+    height: 1.125rem;
 }
 .shopping-cart{
     width: 1.25rem;
@@ -85,6 +86,10 @@ span{
         font-size: .75rem;
     }
     .shopping-cart{
+        width: .7rem;
+        height: .65rem;
+    }
+    svg{
         width: .7rem;
         height: .65rem;
     }
