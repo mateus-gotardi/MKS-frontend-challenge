@@ -68,8 +68,9 @@ export const CardContainer = styled.div<ComponentProps>`
     }
     .product-image{
         padding: .4rem;
-        width: fit-content;
         max-height: 8.9rem;
+        aspect-ratio: 1/1;
+        object-fit: contain;
     }
 
 `
