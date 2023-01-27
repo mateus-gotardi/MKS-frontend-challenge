@@ -156,7 +156,7 @@ export const ItemCart = styled.div<ComponentProps>`
         padding-right: 2.8rem;
         position: relative;
         top: 1rem;
-        left: -.6rem;
+        left: -.2rem;
         height: 1.8rem;
     }
     .quantity-modifier{
