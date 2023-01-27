@@ -13,7 +13,7 @@ const CartItem = (props: any) => {
     return (
         <ItemCart colors={colors}>
             <div className='remove-product'>
-                <CartCross colors={colors} sizes={{ width: 1.125, height: 1.125, font: 0.875 }} onClick={() => { dispatch(removeAll(product)) }}>X</CartCross>
+                <CartCross isCart colors={colors} sizes={{ width: 1.125, height: 1.125, font: 0.875 }} onClick={() => { dispatch(removeAll(product)) }}>X</CartCross>
             </div>
             <div className="item">
                 <div className="image-container">

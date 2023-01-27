@@ -142,7 +142,9 @@ export const ItemCart = styled.div<ComponentProps>`
         justify-content: flex-end;
         padding-right: 2.8rem;
         position: relative;
-        top: .7rem;
+        top: 1rem;
+        left: -.6rem;
+        height: 1.8rem;
     }
     .quantity-modifier{
         color: ${props => props.colors.black};
@@ -229,6 +231,11 @@ export const ItemCart = styled.div<ComponentProps>`
         .cart-price{
             padding: 0 !important;
         }
+        .remove-product{
+            top: 2rem !important;
+            left: -.1rem;
+            height: 1rem;
+        }
     }
 `
 
@@ -245,4 +252,25 @@ export const CartCross = styled.button<ComponentProps>`
     align-items: center;
     justify-content: center;
     font-weight: 400;
+    @media (max-width: 500px) {
+         color: ${props => props.colors.primary} !important;
+         ${(props) => {
+            if (props.isCart) {
+                return `
+                    background-color: ${props.colors.white};
+                    color: ${props.colors.black} !important;
+                    font-size: 2.625rem;
+                    width: 3rem;
+                    height: 3rem;
+    `}
+    }}
+         ${(props) => {
+            if (!props.isCart) {
+                return `
+                    font-size: 2.75rem;
+                    width: 2.9rem;
+                    height: 2.9rem;
+    `}
+    }}
+    }
 `
