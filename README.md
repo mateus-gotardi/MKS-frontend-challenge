@@ -53,3 +53,11 @@ Ferramentas requeridas
     - Os testes estão no diretório __tests__ o teste de api foi desabilitado para evitar sobrecarga de requisições
 
     - As funções para formatação de nomes e preço dos produtos está em utils/functions
+    
+## Images
+### result
+![image](https://user-images.githubusercontent.com/98918812/215115485-6e5e4d1a-ff8a-4e8d-83cd-6bcdaca1c4f3.png)
+    - A fim de seguir fielmente o layout proposto e ainda assim ser possivel ler a descrição de todos os produtos, adicionei um hover aos produtos
+![image](https://user-images.githubusercontent.com/98918812/215116511-f0466518-02d8-461c-9522-7e5b3f6301f9.png)
+![image](https://user-images.githubusercontent.com/98918812/215116873-c9dcc739-b986-4580-a55c-c6b22c296acd.png)
+
