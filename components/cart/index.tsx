@@ -4,7 +4,7 @@ import { CartContainer, CartCross } from "./styles";
 import CartItem from "./cartItem";
 import { useSelector } from 'react-redux'
 import { selectCart } from "../../features/cart/cartSlice";
-import { formatPrice } from "utils/functions";
+import { formatPrice } from "../../utils/functions";
 
 const Cart = (props: any) => {
 
