@@ -159,55 +159,7 @@ export const ItemCart = styled.div<ComponentProps>`
         left: -.2rem;
         height: 1.8rem;
     }
-    .quantity-modifier{
-        color: ${props => props.colors.black};
-        label{
-         font-size: .3125rem;   
-        }
-        width: 4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: .25rem;
-        .quantities{
-            display: flex;
-            align-items: center;
-            width: 3.125rem;
-            height: 1.1875rem;
-            border: 0.3px solid #BFBFBF;
-            border-radius: 4px;
-            border-color: ${props => props.colors.lighterGrey};
-            justify-content: space-between;
-            background-color: ${props => props.colors.white};
-        }
-        .less, .more{
-            background-color: ${props => props.colors.white};
-            border: none;
-            font-size: .5rem;
-            cursor: pointer;
-            width: 70%;
-            height: 70%;
-            font-weight: 400;
-        }
-        .less{
-            padding-left: .5rem;
-            padding-right: .1rem;
-        }
-        .more{
-            padding-right: .5rem;
-            padding-left: .1rem;
-        }
-        .quantity{
-            font-size: .5rem;
-            font-weight: 400;
-            border-right-style: solid;
-            border-left-style: solid;
-            border-width: .3px;
-            padding: 0 .25rem;
-            border-color: ${props => props.colors.lighterGrey};
-        }
-    }
+    
     @media (max-width: 500px) {
         .item{
             width: 15.625rem !important;
@@ -236,11 +188,7 @@ export const ItemCart = styled.div<ComponentProps>`
                 font-size: 1.25rem !important;
             }
         }
-        .quantity-modifier{
-            label{
-                display:none;
-            }
-        }
+
         .cart-price{
             padding: 0 !important;
         }
@@ -268,8 +216,8 @@ export const CartCross = styled.button<ComponentProps>`
     @media (max-width: 500px) {
          color: ${props => props.colors.primary} !important;
          ${(props) => {
-            if (props.isCart) {
-                return `
+        if (props.isCart) {
+            return `
                     background-color: ${props.colors.white};
                     color: ${props.colors.black} !important;
                     font-size: 2.625rem;
@@ -278,12 +226,69 @@ export const CartCross = styled.button<ComponentProps>`
     `}
     }}
          ${(props) => {
-            if (!props.isCart) {
-                return `
+        if (!props.isCart) {
+            return `
                     font-size: 2.75rem;
                     width: 2.9rem;
                     height: 2.9rem;
     `}
     }}
     }
+`
+
+export const QuantityModifier = styled.div<ComponentProps>`
+        color: ${props => props.colors.black};
+        label{
+         font-size: .3125rem;   
+        }
+        width: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: .25rem;
+        .quantities{
+            display: flex;
+            align-items: center;
+            width: 3.125rem;
+            height: 1.1875rem;
+            border: 0.3px solid #BFBFBF;
+            border-radius: 4px;
+            border-color: ${props => props.colors.lighterGrey};
+            justify-content: space-between;
+            background-color: ${props => props.colors.white};
+        }
+        .less, .more{
+            background-color: ${props => props.colors.white};
+            color: ${props => props.colors.black};
+            border: none;
+            font-size: .5rem;
+            cursor: pointer;
+            width: 70%;
+            height: 70%;
+            font-weight: 400;
+        }
+        .less{
+            padding-left: .5rem;
+            padding-right: .1rem;
+        }
+        .more{
+            padding-right: .5rem;
+            padding-left: .1rem;
+        }
+        .quantity{
+            font-size: .5rem;
+            font-weight: 400;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-width: .3px;
+            padding: 0 .25rem;
+            border-color: ${props => props.colors.lighterGrey};
+            color: ${props => props.colors.black};
+        }
+        @media (max-width: 500px) {
+            label{
+                display:none;
+            }
+        }
 `

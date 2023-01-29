@@ -1,6 +1,6 @@
 import React from "react";
 import { colors, PriceTag } from "..";
-import { ItemCart, CartCross } from "./styles";
+import { ItemCart, CartCross, QuantityModifier } from "./styles";
 import { formatPrice, formatName } from "../../utils/functions";
 import { useDispatch } from 'react-redux'
 import { addProduct, removeAll, removeProduct } from "../../features/cart/cartSlice"
@@ -21,14 +21,14 @@ const CartItem = (props: any) => {
                 </div>
                 <h1 className="cart-name">{formatName(product.name, product.brand)}</h1>
                 <div className="quantity-price">
-                    <div className="quantity-modifier">
+                    <QuantityModifier colors={colors}>
                         <label>Qtd:</label>
                         <div className="quantities">
                             <button className="less" onClick={() => { dispatch(removeProduct(product)) }}>-</button>
                             <span className="quantity">{product.quantity}</span>
                             <button className="more" onClick={() => { dispatch(addProduct(product)) }}>+</button>
                         </div>
-                    </div>
+                    </QuantityModifier>
                     <PriceTag price={formatPrice(product.price*product.quantity)} isCart/>
                 </div>
 
