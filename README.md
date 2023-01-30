@@ -36,6 +36,10 @@ Ferramentas requeridas
 
 # Execução
 
+## Deploy
+
+   https://mks-frontend-challenge-mateus-gotardi.vercel.app
+
 ## estrutura
 
    Os componentes estão na pasta components, em subpastas juntamente com os respectivos sub-componentes e estilos, eles são importados para o arquivo index da pasta components e exportados a partir de lá a fim de diminuir a multiplicidade de imports
